@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'font-primary';
+  src: url('./Montserrat/Montserrat-Black.ttf') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap; /* Melhora o carregamento visual */
+}
+
+/* Fonte Secundária */
+@font-face {
+  font-family: 'font-secondary';
+  src: url('./Roboto/Roboto-Bold.ttf') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,84 @@
+:root {
+    /* branding */
+    --primary-color: #162642;
+    --secondary-color: #f1491c;
+
+    /* alert */
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+
+    /* gray scale */
+    /* Escala de Cinza Neutra */
+    --gray-0: #ffffff;
+    /* Branco puro */
+    --gray-50: #f9fafb;
+    /* Fundo subtil */
+    --gray-100: #f3f4f6;
+    /* Elementos secundários */
+    --gray-200: #e5e7eb;
+    /* Bordas e divisórias */
+    --gray-300: #d1d5db;
+    /* Placeholders ou bordas fortes */
+    --gray-400: #9ca3af;
+    /* Ícones desativados */
+    --gray-500: #6b7280;
+    /* Texto secundário */
+    --gray-600: #4b5563;
+    /* Texto de apoio */
+    --gray-700: #374151;
+    /* Texto principal */
+    --gray-800: #1f2937;
+    /* Títulos e superfícies escuras */
+    --gray-900: #111827;
+    /* Texto quase preto */
+    --gray-1000: #000000;
+    /* Preto puro */
+
+
+    --spacing-1: 8px;
+    /* 1x8 */
+    --spacing-2: 16px;
+    /* 2x8 */
+    --spacing-3: 24px;
+    /* 3x8 */
+    --spacing-4: 32px;
+    /* 4x8 */
+    --spacing-5: 40px;
+    /* 5x8 */
+    --spacing-6: 48px;
+    /* 6x8 */
+    --spacing-8: 64px;
+    /* 8x8 */
+    --spacing-10: 80px;
+    /* 10x8 */
+    --spacing-12: 96px;
+    /* 12x8 */
+
+    /* Famílias de Fontes */
+  --font-primary: 'font-primary', system-ui, -apple-system, sans-serif;
+  --font-secondary: 'font-secondary', Georgia, serif;
+
+  /* Escala de Tamanhos (Rem) */
+  --text-xs: 0.75rem;  /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem;   /* 16px - Padrão do navegador */
+  --text-md: 1.125rem; /* 18px */
+  --text-lg: 1.25rem;  /* 20px */
+  --text-xl: 1.5rem;   /* 24px */
+  --text-2xl: 2rem;    /* 32px */
+  --text-3xl: 3rem;    /* 48px */
+
+  /* Pesos de Fonte (Weights) */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  /* Altura de Linha (Line-height) */
+  --lh-tight: 1.2;
+  --lh-base: 1.5;
+  --lh-relaxed: 1.75;
+
+}
