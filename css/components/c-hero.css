@@ -6,7 +6,7 @@
   background-size: auto auto;
   background-position: 38vw -7svh;
   background-repeat: no-repeat;
-  min-width: 390px;
+  /* min-width: 390px; */
 }
 
 .hero::before {
