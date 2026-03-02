@@ -119,7 +119,7 @@
 
   .hero {
     background-position: -19vw -9svh;
-    width: 1005;
+    width: 100%;
   }
 
   .hero::before {
