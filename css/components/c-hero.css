@@ -96,9 +96,9 @@
   }
 
   .hero__container {
-    padding-inline: var(--spacing-4);
-    /* padding-right: 200px; */
-    width: 1024px;
+   padding-inline: var(--spacing-4);
+    width: 100%;      /* Troque 1024px por 100% */
+    max-width: 100%;
   }
 
   .hero__headline {
