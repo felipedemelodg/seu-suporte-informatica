@@ -96,8 +96,8 @@
   }
 
   .hero__container {
-   padding-inline: var(--spacing-4);
-    width: 100%;      /* Troque 1024px por 100% */
+    padding-inline: var(--spacing-4);
+    width: 100%; /* Troque 1024px por 100% */
     max-width: 100%;
   }
 
@@ -171,7 +171,7 @@
     min-width: 0; 
     width: 100%;
     background-position: center; */
-     width: 100% !important;
+    width: 100% !important;
     max-width: 100vw; /* Use vw para garantir que pegue a largura da janela */
     min-width: 0;
     background-position: center;
@@ -185,12 +185,12 @@
     background-position: -70% 0%;
     width: 100%;
     max-width: 100%;
-     width: 100%;
+    width: 100%;
     max-width: 100vw;
   }
 
   .hero::before {
-    clip-path: polygon(0px 0px, -42% 11%, 98% 70%, 43% 100%, 0px 100%);
+    clip-path: polygon(0px 0px, -22svh 11svh, 48svh 70svh, 20svh 100svh, 0px 100svh);
     background-size:
       auto 44%,
       100%;
