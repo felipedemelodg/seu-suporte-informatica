@@ -81,7 +81,9 @@
 .hero__headline {
   margin-bottom: var(--spacing-5);
 }
-
+.hero__subheadline{
+  max-width:400px
+}
 /* table */
 @media (max-width: 1024px) {
   .hero {
