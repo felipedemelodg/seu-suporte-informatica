@@ -114,12 +114,12 @@
   .hero__container {
     /* padding-inline: var(--spancing-2); */
     grid-template-columns: 1fr;
-    width: 768px;
+    width: 100%;
   }
 
   .hero {
     background-position: -19vw -9svh;
-    width: 768px;
+    width: 1005;
   }
 
   .hero::before {
