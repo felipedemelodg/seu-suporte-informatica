@@ -172,15 +172,15 @@
     padding-inline: var(--spacing-1);
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
-    background-position: -70vw 0svh;
+    background-position: -70% 0%;
   }
 
   .hero::before {
     clip-path: polygon(
       0px 0px,
-      -22svh 11svh,
-      48svh 70svh,
-      20svh 100%,
+      -42% 11%,
+      98% 70%,
+      43% 100%,
       0px 100%
     );
     background-size:
