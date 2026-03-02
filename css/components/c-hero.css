@@ -166,10 +166,13 @@
 
 @media (max-width: 390px) {
   .hero {
-    max-width: 390px;
+    /* max-width: 390px;
     background-position: -50svh -10svh;
-    min-width: 0; /* Remove o bloqueio dos 390px */
+    min-width: 0; 
     width: 100%;
+    background-position: center; */
+     width: 100%;
+    max-width: 100vw; /* Use vw para garantir que pegue a largura da janela */
     background-position: center;
   }
 
@@ -181,6 +184,8 @@
     background-position: -70% 0%;
     width: 100%;
     max-width: 100%;
+     width: 100%;
+    max-width: 100vw;
   }
 
   .hero::before {
@@ -201,7 +206,9 @@
 
   .hero__headline {
     font-size: var(--text-2xl);
-    width: 200px;
+    /* width: 200px; */
+    width: 100%; /* Em vez de 200px, para não cortar texto */
+    max-width: 250px;
   }
 
   .hero__subheadline {
