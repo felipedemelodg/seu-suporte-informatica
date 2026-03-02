@@ -1,0 +1,164 @@
+/* ==========================================================================
+   SEÇÃO 01: HEADER ESCURO
+   ========================================================================== */
+.contato-header {
+  margin-top: 60px;
+  z-index: -1;
+  background-color: var(--primary-color);
+  /* Background com pattern sutil de circuitos centralizado */
+  background-image: url("../../assets/img/circuito.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 60% auto;
+  color: #ffffff;
+  text-align: center;
+  /* Espaço extra no fundo para os cards "sentarem" em cima */
+  padding-block: clamp(4rem, 10vh, 8rem) clamp(10rem, 15vh, 14rem);
+  position: relative;
+  grid-area: hero;
+}
+
+.contato-header__container {
+  width: min(
+    90%,
+    800px
+  ); /* Container mais estreito para o texto centralizado */
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contato-header__tagline {
+  color: var(--secondary-color);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contato-header__titulo {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.contato-header__descricao {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+/* ==========================================================================
+   SEÇÃO 02: CARDS DE ATENDIMENTO
+   ========================================================================== */
+.atendimento-opcoes {
+  background-color: #e9ecef; /* Fundo cinza claro da parte inferior */
+  padding-bottom: 5rem;
+  grid-area: atendimento;
+}
+
+.atendimento-opcoes__container {
+  width: min(90%, 1100px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  /* O PULO DO GATO: Margem negativa para subir os cards */
+  margin-top: -8rem;
+}
+
+/* Estilo Individual do Card */
+.atendimento-card {
+  background-color: #ffffff;
+  padding: clamp(2rem, 5vw, 4rem) 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.atendimento-card:hover {
+  transform: translateY(-10px);
+}
+
+.atendimento-card__icon-wrapper {
+  margin-bottom: 2rem;
+}
+
+.atendimento-card__icon {
+  width: 120px; /* Tamanho grande conforme imagem */
+  height: auto;
+}
+
+.atendimento-card__titulo {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.atendimento-card__texto {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  flex-grow: 1; /* Garante que os botões fiquem alinhados na base */
+}
+
+/* Botões */
+.atendimento-card__btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+.atendimento-card__btn--destaque {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+}
+
+.atendimento-card__btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 10px 15px rgba(232, 93, 68, 0.2);
+}
+
+/* ==========================================================================
+   BREAKPOINTS (1024, 768, 390)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .atendimento-opcoes__container {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .atendimento-opcoes__container {
+    grid-template-columns: 1fr; /* Empilha no mobile/tablet */
+    margin-top: -6rem;
+  }
+
+  .contato-header {
+    padding-bottom: 10rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .contato-header__titulo {
+    font-size: 1.8rem;
+  }
+
+  .atendimento-card {
+    padding: 2.5rem 1.5rem;
+  }
+}

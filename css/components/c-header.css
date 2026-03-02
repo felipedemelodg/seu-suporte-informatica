@@ -1,0 +1,179 @@
+/* header.css */
+.header {
+    grid-area: header;
+    width: 100%;
+    /* min-width: 390px;/ */
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--gray-300);
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    /* padding: var(--spacing-1); */
+}
+
+/* MACRO: Grid para separar Logo de Nav */
+.header__container {
+    display: grid;
+    grid-template-columns: auto  1fr;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    min-height: 60px;
+    width: 100%;
+}
+
+/* MICRO: Flexbox para a lista de links */
+.header__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--spacing-1);
+}
+
+.header__link {
+    text-decoration: none;
+    font-family: var(--font-primary);
+    transition: 0.3s;
+    color: var(--gray-0);
+}
+
+.header__link--active {
+    /* Exemplo de Modificador BEM */
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.header__mobile-button {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 52px;
+    height: 44px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.header__icon {
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: currentColor;
+    position: relative;
+    transition: var(--gray-0) 0.3s ease;
+}
+
+.header__icon::before,
+.header__icon::after {
+    background-color: var(--gray-0);
+    content: "";
+    width: var(--width-hamburguer);
+    height: var(--height-hamburguer);
+    position: absolute;
+    transition: transform 0.3s ease, top var(--transition-speed) ease, bottom var(--transition-speed) ease;
+    left: 0;
+}
+
+.header__icon::before {
+    top: -19px
+}
+
+.header__icon::after {
+    bottom: -18px
+}
+
+/* ESTADO ABERTO: Transformação em X */
+[aria-expanded="true"] .header__icon {
+    background-color: transparent;
+    /* Esconde a barra central */
+}
+
+[aria-expanded="true"] .header__icon::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+[aria-expanded="true"] .header__icon::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+/* Esconder o menu por padrão */
+.header__nav {
+    display: none;
+}
+
+.header__nav-open {
+    display: grid;
+}
+
+.header__container-resize {
+    height: 100svh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 56px 56px 1fr;
+}
+
+.header__logo-hidden {
+    display: var(--visibility-none)
+}
+
+.header__nav.is-active {
+    display: block;
+}
+
+
+
+/* hero */
+@media(max-width: 1024px){
+    .header__container{
+        /* width:1024px; */
+        padding-inline: var(--spacing-3);
+        /* grid-template-columns: auto 1fr; */
+    }
+}
+
+
+@media (min-width: 769px) {
+    .header__container {
+        grid-template-columns: auto 1fr;
+    }
+    .header__mobile-button {
+        display: none ;
+    }
+
+    .header__nav {
+        display: block ;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header__container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 56px auto;
+        padding-inline: var(--spancing-2);
+        /* width:768px; */
+        margin: 0;
+    }
+
+    .header__logo {
+        display: none
+    }
+
+    .header__list {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-5);
+    }
+}
+
+@media (max-width: 390px){
+    .header__container{
+        max-width: 390px;
+    }
+    
+}

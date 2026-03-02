@@ -1,15 +1,384 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <title>Seu Suporte Informática</title>
 </head>
+
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <div class="layout-wrapper">
+        <header class="header">
+            <div class="header__container">
+
+                <div class="header__logo">
+                    <a href="#"><img src="assets/img/header-logo.png" alt="Logo"></a>
+                </div>
+
+                <button class="header__mobile-button" aria-label="abrir menu" aria-expanded="false"
+                    aria-controls="main-menu">
+                    <span class="header__icon">
+                    </span>
+                </button>
+                <nav class="header__nav" id="main-menu">
+                    <ul class="header__list">
+
+                        <li class="header__item">
+                            <a href="index.html" class="header__link o-btn c-btn--primary c-btn header__item-home">Home</a>
+                        </li>
+                        <li class="header__item  ">
+                            <a href="quem-somos.html" class="header__link o-btn c-btn--primary c-btn header__item-quemsomos">Quem Somos</a>
+                        </li>
+                        <li class="header__item  ">
+                            <a href="servicos.html" class="header__link o-btn c-btn--primary c-btn header__item-servicos">Serviços
+                            </a>
+                        </li>
+                        <li class="header__item  ">
+                            <a href="contatos.html" class="header__link o-btn c-btn--primary c-btn header__item-contatos">Contatos</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <!-- redes social -->
+            <div class="contatos-fixos">
+                <a href="https://wa.me/5581983703698" class="btn-fixo whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"><img src="assets/icons/whatsapp_cta_button.png" alt=""></i>
+                    <a href="https://instagram.com" class="btn-fixo instagram" target="_blank">
+                        <i class="fab fa-instagram"><img src="assets/icons/instagran-icon.png" alt=""></i>
+                    </a>
+            </div>
+
+
+
+            <section class="hero">
+
+
+                <div class="hero__container">
+
+                    <div class="hero__infos">
+                        <img src="assets/img/hero-logo.png" class="hero__logo" alt="Logo da Seu Suporte Informática">
+                        <h1 class="hero__headline">Tecnologia
+                            e Segurança</h1>
+                        <p class="hero__subheadline">Mais do que suporte, somos o alicerce estratégico da sua
+                            empresa.
+                            <strong>
+                                Tecnologia que sustenta o seu negócio e protege o seu patrimônio.</strong>
+                        </p>
+                        <button class="hero__cta o-btn c-btn c-btn--cta">
+                            Receba diagnóstico gratuito
+                            <img src="assets/icons/whatsapp_cta_button.png" alt="whatsapp-logo">
+                        </button>
+                    </div>
+
+
+                    <div class="hero__brands">
+
+                        <div class="hero__brands-list">
+                            <img src="assets/img/samsung-logo.png" alt="Samsung" class="hero__brand-item">
+                            <img src="assets/img/cce-logo.png" alt="CCE" class="hero__brand-item">
+                            <img src="assets/img/dell-logo.png" alt="Dell" class="hero__brand-item">
+                            <img src="assets/img/windows-logo.png" alt="Windows" class="hero__brand-item">
+                        </div>
+
+
+                    </div>
+            </section>
+            <section class="quem-somos" aria-labelledby="quem-somos-titulo">
+
+                <div class="quem-somos__container">
+                    <header class="quem-somos__header">
+                        <h2 id="quem-somos-titulo" class="quem-somos__titulo">
+                            Quem Somos
+                            <!-- <img src="assets/icons/simbolo-para-titulos.png" alt="" aria-hidden="true"
+                                class="quem-somos__icon"> -->
+                        </h2>
+                    </header>
+                    <section class="quem-somos__content">
+
+                        <figure class="quem-somos__image-container">
+                            <img src="assets/img/quem-somos-img.png" class="quem-somos__img" alt="Placa de circuito">
+                        </figure>
+                        <article class="quem-somos__text">
+                            <h3 class="quem-somos__subtitulo">
+                                Não somos apenas técnicos de informática. Somos o alicerce da sua empresa.
+                            </h3>
+                            <p class="quem-somos__texto">
+                                Entendemos que um computador parado ou uma câmera offline não é apenas um problema
+                                técnico; é perda de produtividade e segurança.
+                            </p>
+                            <strong class="quem-somos__destaque">
+                                Estruturamos sua infraestrutura para que você foque no que realmente importa: o
+                                crescimento do seu negócio.
+                            </strong>
+                        </article>
+                    </section>
+            </section>
+
+            <section class="problemas-resolvemos" aria-labelledby="problemas-resolvemos-titulo">
+
+                <div class="problemas-resolvemos__container">
+
+                    <header class="problemas-resolvemos__header">
+
+                        <h2 id="problemas-resolvemos-titulo" class="problemas-resolvemos__titulo">
+                            Problemas que resolvemos
+                            <!-- <img src="assets/icons/simbolo-para-titulos-branco.png" alt=""
+                                class="problemas-resolvemos__icon" aria-hidden="true"> -->
+
+                        </h2>
+                    </header>
+                    <ul class="problemas-resolvemos__cards-list">
+                        <li class="problemas-resolvemos__card-item">
+
+                            <img src="assets/icons/cadeado-icon.png" alt="vulnerabilidade de sistema"
+                                class="problemas-resolvemos__card-icon">
+                            <h3 class="problemas-resolvemos__card-titulo">
+                                Vulnerabilidade
+                            </h3>
+                            <p class="problemas-resolvemos__card-texto">
+                                Sistemas vulneráveis por falta de gestão de TI.
+                            </p>
+                        </li>
+                        <li class="problemas-resolvemos__card-item">
+                            <img src="assets/icons/ponto-cego-icon.png" alt="ponto cego na segurança"
+                                class="problemas-resolvemos__card-icon">
+                            <h3 class="problemas-resolvemos__card-titulo">
+                                Pontos Cegos
+                            </h3>
+                            <p class="problemas-resolvemos__card-texto">
+                                Pontos cegos na segurança por câmeras mal instaladas.
+                            </p>
+                        </li>
+                        <li class="problemas-resolvemos__card-item">
+                            <img src="assets/icons/grafico-icon.png" alt="instabilidade na rede"
+                                class="problemas-resolvemos__card-icon">
+                            <h3 class="problemas-resolvemos__card-titulo">
+                                Redes Instáveis
+                            </h3>
+                            <p class="problemas-resolvemos__card-texto">
+                                Redes instáveis que interrompem o fluxo de dados.
+                            </p>
+                        </li>
+                        <li class="problemas-resolvemos__card-item">
+                            <img src="assets/icons/tartaruga-icon.png" alt="lentidadão no sistema"
+                                class="problemas-resolvemos__card-icon">
+                            <h3 class="problemas-resolvemos__card-titulo">
+                                Lentidão
+                            </h3>
+                            <p class="problemas-resolvemos__card-texto">
+                                Equipamentos lentos que travam a operação
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="como-ajudar" aria-labelledby="como-podemos-ajudar">
+                <div class="como-ajudar__container">
+                    <header class="como-ajudar__header">
+                        <h2 id="como-podemos-ajudar" class="como-ajudar__titulo">
+                            Como podemos ajudar
+                            <!-- <img src="" alt="" class="como-ajudar__icon" aria-hidden="true"> -->
+                        </h2>
+
+                    </header>
+                    <ul class="como-ajudar__card-list">
+                        <li class="como-ajudar__card-item">
+                            <img src="assets/img/manuntencao-de-placa.png" alt="Tecnico soldando placa"
+                                class="como-ajudar__card-image">
+                            <h3 class="como-ajudar__card-titulo">
+                                Manutenção de Hardware
+                            </h3>
+                            <h4 class="como-ajudar__card-subtitulo">Computadores, Notebooks e Impressoras</h4>
+                            <p class="como-ajudar__card-texto">
+                                Recuperamos a performance dos seus equipamentos e aplicamos manutenção preventiva para
+                                proteger o seu investimento e aumentar a vida útil.
+                            </p>
+                            <button class="como-ajudar__card-btn o-btn c-btn c-btn--primary">
+                                <a href="https://wa.me/5581983703698?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20manutenção%20de%20hardware.%20Poderia%20indicar-me%20quais%20os%20dados%20necessários%20para%20avançarmos?%20Obrigado!"
+                                    target="_blank" class="c-btn--primary--link">
+                                    Faça um orçamento
+                                </a>
+                            </button>
+                        </li>
+
+
+                        <li class="como-ajudar__card-item">
+
+                            <!-- aqui esta a imagem -->
+                            <img src="assets/img/monitoramento-de-seguranca.png" alt="Olhando monitores de segurança"
+                                class="como-ajudar__card-image">
+
+                            <h3 class="como-ajudar__card-titulo">
+                                Segurança Eletrónica
+                            </h3>
+
+                            <h4 class="como-ajudar__card-subtitulo">Instalação e Monitorização</h4>
+                            <p class="como-ajudar__card-texto">
+                                Projetos estratégicos de CFTV com acesso remoto. Tenha visão total e monitorize o seu
+                                património de qualquer lugar, em tempo real.
+                            </p>
+                            <button class="como-ajudar__card-btn o-btn c-btn c-btn--primary">
+                                <a class="c-btn--primary--link"
+                                    href="https://wa.me/5581983703698?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20Segurança%20Eletrónica.%20Poderia%20indicar-me%20quais%20os%20dados%20necessários%20para%20avançarmos?%20Obrigado!"
+                                    target="_blank">
+
+                                    Faça um orçamento
+                                </a>
+                            </button>
+                        </li>
+
+
+                        <li class="como-ajudar__card-item">
+                            <img src="assets/img/gestao-ti.png" alt="Gestor analizando dados"
+                                class="como-ajudar__card-image">
+                            <h3 class="como-ajudar__card-titulo">
+                                Gestão de TI
+                            </h3>
+                            <h4 class="como-ajudar__card-subtitulo">Monitorização e Consultoria</h4>
+                            <p class="como-ajudar__card-texto">
+                                Recuperamos a performance dos seus equipamentos e aplicamos manutenção preventiva para
+                                proteger o seu investimento e aumentar a vida útil.
+                            </p>
+                            <button class="como-ajudar__card-btn o-btn c-btn c-btn--primary">
+                                <a class="c-btn--primary--link"
+                                    href="https://wa.me/5581983703698?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20Gestão%20de%20TI.%20Poderia%20indicar-me%20quais%20os%20dados%20necessários%20para%20avançarmos?%20Obrigado!"
+                                    target="_blank">
+                                    Faça um orçamento
+                                </a>
+                            </button>
+                        </li>
+                        <li class="como-ajudar__card-item">
+                            <img src="assets/img/sevidores.png" alt="Servidor com cabos organizados"
+                                class="como-ajudar__card-image">
+                            <h3 class="como-ajudar__card-titulo">
+                                Infraestrutura e Redes
+                            </h3>
+                            <h4 class="como-ajudar__card-subtitulo">Conectividade Robusta</h4>
+                            <p class="como-ajudar__card-texto">
+                                Cabeamento estruturado e soluções de conectividade para garantir um fluxo de dados
+                                estável e sem interrupções
+                            </p>
+                            <button class="como-ajudar__card-btn o-btn c-btn c-btn--primary">
+                                <a class="c-btn--primary--link"
+                                    href="https://wa.me/5581983703698?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20Infraestrutura%20e%20Redes.%20Poderia%20indicar-me%20quais%20os%20dados%20necessários%20para%20avançarmos?%20Obrigado!">
+                                    Faça um orçamento
+                                </a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="como-pensamos" aria-labelledby="como-pensamos-titulo">
+                <div class="como-pensamos__container">
+
+                    <!-- Cabeçalho da Seção -->
+                    <header class="como-pensamos__header">
+                        <h2 id="como-pensamos-titulo" class="como-pensamos__secao-titulo">
+                            Como Pensamos
+                            <!-- <img src="assets/icons/simbolo-para-titulos.png" alt="" -->
+                            <!-- class="como-pensamos__titulo-icon"> -->
+                        </h2>
+                    </header>
+
+                    <div class="como-pensamos__content">
+                        <!-- Lado Esquerdo: Iconografia -->
+                        <figure class="como-pensamos__visual" aria-hidden="true">
+                            <img src="assets/icons/como-pensamos-icon.png" alt="" class="como-pensamos__icon">
+                        </figure>
+
+                        <!-- Lado Direito: Texto e Metodologia -->
+                        <article class="como-pensamos__texto-bloco">
+                            <span class="como-pensamos__tagline">Nossa Metodologia</span>
+
+                            <h3 class="como-pensamos__principal-titulo">
+                                A tecnologia só entra depois que o problema está entendido
+                            </h3>
+
+                            <p class="como-pensamos__descricao">
+                                Antes de passar um cabo ou formatar uma máquina, investigamos onde sua operação perde
+                                eficiência e o que precisa de proteção imediata.
+                            </p>
+
+                            <blockquote class="como-pensamos__citacao">
+                                <p>Não entregamos apenas peças; entregamos disponibilidade.</p>
+                            </blockquote>
+                        </article>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+
+                <!-- Seção Principal de Conteúdo -->
+                <div class="footer__content">
+
+                    <!-- Coluna 1: Logo e Slogan -->
+                    <div class="footer__brand">
+                        <img src="assets/icons/logo-branca.png" alt="Seusuporte Assistência Técnica"
+                            class="footer__logo">
+                        <p class="footer__slogan">
+                            Tecnologia e segurança para o seu negócio crescer sem interrupções.
+                        </p>
+                    </div>
+
+                    <!-- Coluna 2: Navegação -->
+                    <nav class="footer__nav" aria-label="Navegação secundária do rodapé">
+                        <h3 class="footer__title">Navegação</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#home" class="footer__link">Home</a></li>
+                            <li class="footer__item"><a href="#quem-somos" class="footer__link">Quem Somos</a></li>
+                            <li class="footer__item"><a href="#servicos" class="footer__link">Serviços</a></li>
+                            <li class="footer__item"><a href="#contato" class="footer__link">Contato</a></li>
+                        </ul>
+                    </nav>
+<!-- +5581985284225 -->
+                    <!-- Coluna 3: Contato -->
+                    <section class="footer__contact" aria-labelledby="footer-contact-title">
+                        <h3 id="footer-contact-title" class="footer__title">Fale Conosco</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">WhatsApp: (81) 9 8528-4225</li>
+                            <li class="footer__item">Email: comercialseusuporte@gmail.com</li>
+                            <li class="footer__item">Horário: Seg a Sex, 08h às 18h</li>
+                        </ul>
+                    </section>
+
+                </div>
+
+                <!-- CTA: Botão de Diagnóstico -->
+                <div class="footer__cta">
+                    <a href="https://wa.me/5581983703698?                 text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20Receba%20diagnóstico%20gratuito.%20Poderia%20indicar-me%20quais%20os%20dados%20necessários%20para%20avançarmos?%20Obrigado!"
+                     class="footer__btn" target="_blank" rel="noopener noreferrer">
+                        Receba diagnóstico gratuito
+                        <img src="assets/icons/whatsapp_cta_button.png" class="fab fa-whatsapp" aria-hidden="true">
+                    </a>
+                </div>
+
+                <!-- Linha Divisória e Copyright -->
+                <div class="footer__bottom">
+                    <hr class="footer__divider" aria-hidden="true">
+                    <p class="footer__copy">
+                        &copy; 2024 Seu Suporte Informática. Todos os direitos reservados.
+                    </p>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
     <script type="module" src="js/main.js"></script>
 </body>
+
 </html>

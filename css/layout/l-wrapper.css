@@ -1,0 +1,7 @@
+/* 2. Estrutura Macro com Grid */
+.layout-wrapper {
+  display: grid;
+  min-height: 100svh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+}

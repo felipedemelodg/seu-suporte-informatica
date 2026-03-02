@@ -1,0 +1,179 @@
+/* ==========================================================================
+   SEÇÃO: INFRAESTRUTURA E REDES
+   ========================================================================== */
+
+.infra-redes {
+  background-color: #FFFFFF;
+  padding-block: clamp(4rem, 10vh, 8rem);
+  scroll-margin-top: 60px; /* Header fixo */
+  grid-area: infraestrutura_redes;
+}
+
+.infra-redes__container {
+  width: min(90%, 1440px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* Texto ligeiramente maior que a imagem */
+  align-items: center;
+  gap: clamp(2rem, 8vw, 6rem);
+}
+
+/* Coluna de Conteúdo (Esquerda) */
+.infra-redes__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.infra-redes__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.infra-redes__titulo {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.infra-redes__subtitulo {
+  color: #718096; /* Cinza suave para o apoio */
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Lista de Benefícios */
+.infra-redes__lista {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.infra-redes__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.infra-redes__icon-box {
+  flex-shrink: 0;
+  color: var(--secondary-color); /* Check Laranja */
+  width: 24px;
+  height: 24px;
+  margin-top: 4px;
+}
+
+.infra-redes__item-titulo {
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.infra-redes__item-descricao {
+  color: #4A5568;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 45ch;
+}
+
+/* Botão Solicitar Orçamento */
+.infra-redes__btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.infra-redes__btn:hover {
+  background-color: var(--secondary-color);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(232, 93, 68, 0.2);
+}
+
+/* Coluna da Imagem (Direita) */
+.infra-redes__visual {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.infra-redes__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.infra-redes__visual:hover .infra-redes__image {
+  transform: scale(1.03);
+}
+
+/* ==========================================================================
+   BREAKPOINTS (1440, 1024, 768, 390)
+   ========================================================================== */
+
+/* Laptop (1024px) */
+@media (max-width: 1024px) {
+  .infra-redes__container {
+    gap: 3rem;
+  }
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  .infra-redes__container {
+    grid-template-columns: 1fr; /* Muda para coluna única */
+    text-align: center;
+    gap: 4rem;
+  }
+
+  /* Faz a imagem aparecer antes do texto no mobile */
+  .infra-redes__visual {
+    order: -1; 
+    max-width: 500px;
+    margin-inline: auto;
+  }
+
+  .infra-redes__item {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .infra-redes__item-descricao {
+    margin-inline: auto;
+  }
+
+  .infra-redes__content {
+    align-items: center;
+  }
+}
+
+/* Mobile (390px) */
+@media (max-width: 390px) {
+  .infra-redes {
+    padding-block: 3rem;
+  }
+
+  .infra-redes__titulo {
+    font-size: 1.6rem;
+  }
+
+  .infra-redes__btn {
+    width: 100%; /* Botão em largura total no celular */
+  }
+}

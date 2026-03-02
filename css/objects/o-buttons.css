@@ -1,0 +1,29 @@
+.o-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Reset de estilos nativos */
+    appearance: none;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 0; /* Ou um valor base se for regra global */
+    
+    /* Tipografia e Espaçamento Base */
+    padding: var(--spacing-2) var(--spacing-4);
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    
+    /* Comportamento */
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+    gap: var(--spacing-1)
+}
+
+@media(max-width:768px){
+    .o-btn{
+        padding-inline: var(--spacing-3);
+    }
+}

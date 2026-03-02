@@ -1,0 +1,164 @@
+/* ==========================================================================
+   SEÇÃO ESSÊNCIA
+   ========================================================================== */
+
+.essencia {
+  grid-area: nossa_essencia;
+  padding-block: clamp(4rem, 10vh, 8rem);
+  background-color: #ffffff; /* Fundo branco conforme a imagem */
+  scroll-margin-top: 60px; /* Compensação do header fixo */
+}
+
+.essencia__container {
+  width: min(90%, 1440px);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 6vh, 5rem);
+}
+
+/* Header da Seção (Título Superior) */
+.essencia__header {
+  text-align: center;
+}
+
+.essencia__secao-titulo {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  display: inline-flex;
+}
+
+/* Linha azul abaixo do título superior */
+.essencia__secao-titulo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Linha curta conforme o design */
+  height: 3px;
+  background-color: var(--primary-color);
+}
+.essencia-titulo__icon {
+  margin-top: -20px;
+}
+/* Grid de Conteúdo Principal */
+.essencia__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+  align-items: center;
+  gap: 4rem;
+}
+
+/* Coluna da Imagem */
+.essencia__visual {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.essencia__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.essencia__visual:hover .essencia__image {
+  transform: scale(1.03); /* Leve efeito de zoom no hover */
+}
+
+/* Coluna de Texto */
+.essencia__texto-bloco {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.essencia__principal-titulo {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.essencia__descricao {
+  color: #4a5568;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.essencia__descricao strong {
+  color: var(--primary-color);
+}
+
+/* Frase de Destaque (Barra Laranja) */
+.essencia__destaque {
+  margin: 0;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border-left: 4px solid var(--secondary-color);
+  font-weight: 600;
+  color: var(--primary-color);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (BREAKPOINTS)
+   ========================================================================== */
+
+/* Laptop (1024px) */
+@media (max-width: 1024px) {
+  .essencia__content {
+    gap: 2.5rem;
+  }
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  .essencia__content {
+    grid-template-columns: 1fr; /* Empilha a imagem sobre o texto */
+    gap: 3rem;
+  }
+
+  .essencia__visual {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  .essencia__principal-titulo {
+    text-align: center;
+  }
+}
+
+/* Mobile (390px) */
+@media (max-width: 390px) {
+  .essencia {
+    padding-block: 3rem;
+  }
+
+  .essencia__principal-titulo {
+    font-size: 1.6rem;
+  }
+
+  .essencia__descricao {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .essencia__destaque {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}

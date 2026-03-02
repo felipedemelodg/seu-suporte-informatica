@@ -1,0 +1,96 @@
+.problemas-resolvemos {
+  min-height: 100svh;
+  grid-area: problemas_que_resolvemos;
+  padding-block: clamp(3rem, 10vh, 6rem);
+  display: grid;
+  place-items: center;
+  background-color: var(--primary-color);
+}
+.problemas-resolvemos__container {
+  width: 90%;
+  max-width: var(--max-width, 1200px);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.problemas-resolvemos__header {
+  text-align: center;
+  width: fit-content;
+  margin-inline: auto;
+}
+.problemas-resolvemos__titulo {
+  padding-top: 100px;
+  font-size: var(--text-lg);
+  color: var(--gray-0);
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  position: relative;
+  padding-bottom: 12px;
+}
+.problemas-resolvemos__titulo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--gray-0);
+  border-radius: 2px;
+}
+.problemas-resolvemos__icon {
+  align-self: self-start;
+}
+.problemas-resolvemos__cards-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  grid-template-rows: auto;
+  gap: var(--spacing-6);
+  list-style: none; /* Reset para <ul> */
+  padding: 0;
+}
+.problemas-resolvemos__card-item {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--spacing-6);
+  text-align: center;
+  border-radius: var(--radius-2);
+  height: 100%;
+  box-shadow:
+    0 10px 20px -5px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.problemas-resolvemos__card-item:hover {
+  transform: translateY(-8px);
+  /* Ao passar o rato, a sombra aumenta para simular que o card está "mais alto" */
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.15),
+    0 10px 10px -5px rgba(0, 0, 0, 0.08);
+}
+.problemas-resolvemos__card-icon {
+  height: 45px;
+  width: auto;
+  margin-bottom: var(--spacing-2);
+  object-fit: contain;
+}
+.problemas-resolvemos__card-titulo {
+  color: var(--gray-900);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--spacing-2);
+}
+.problemas-resolvemos__card-texto {
+  color: var(--gray-700);
+  line-height: var(--lh-relaxed);
+  font-size: var(--text-sm);
+  padding-inline:var(--spacing-3)
+}

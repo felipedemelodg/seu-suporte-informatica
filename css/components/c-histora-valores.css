@@ -1,0 +1,74 @@
+.historia-valores {
+  /* Fundo principal com sua variável */
+  background-color: var(--primary-color);
+  
+  /* Configuração da imagem de fundo centralizada */
+  background-image: url('../../assets/img/circuito.png'); /* Substitua pelo seu arquivo */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 70% auto; /* Ou 'cover' se quiser que preencha tudo */
+  
+  /* Ajuste de altura considerando o header fixo de 60px */
+  min-height: calc(100svh - 60px);
+  scroll-margin-top: 60px;
+  
+  /* Centralização do conteúdo */
+  display: grid;
+  grid-area: hero;
+  place-items: center;
+  padding-block: 4rem;
+  position: relative;
+  text-align: center;
+}
+
+.historia-valores__container {
+  width: min(90%, 1440px);
+  margin-inline: auto;
+  z-index: 2; /* Garante que o texto fique acima do background */
+}
+
+.historia-valores__tagline {
+  color: var(--secondary-color);
+  display: block;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.historia-valores__titulo {
+  color: #FFFFFF;
+  /* Fonte responsiva: min 28px, ideal 5vw, max 56px */
+  font-size: clamp(1.75rem, 5vw, 3.5rem); 
+  line-height: 1.2;
+  font-weight: 900;
+  max-width: 22ch; /* Limita a largura para bater com o design da imagem */
+  margin-inline: auto;
+  text-wrap: balance;
+}
+
+/* ==========================================================================
+   Ajustes de Breakpoints (1440, 1024, 768, 390)
+   ========================================================================== */
+
+/* Laptop (1024px) e Tablet (768px) */
+@media (max-width: 1024px) {
+  .historia-valores {
+    background-size: 80%; /* Diminui o desenho de fundo para não poluir o texto */
+  }
+}
+
+/* Mobile (390px) */
+@media (max-width: 390px) {
+  .historia-valores {
+    background-size: 100%; /* Ajusta para preencher a largura do celular */
+    min-height: 450px; /* Altura fixa mínima para mobile */
+    padding-block: 3rem;
+  }
+
+  .historia-valores__titulo {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+}

@@ -1,0 +1,182 @@
+/* ==========================================================================
+   SEÇÃO: GESTÃO DE TI
+   ========================================================================== */
+
+.gestao-ti {
+  background-color: #FFFFFF;
+  padding-block: clamp(4rem, 10vh, 8rem);
+  scroll-margin-top: 60px; /* Altura do seu header fixo */
+  grid-area: gestao_de_ti;
+}
+
+.gestao-ti__container {
+  width: min(90%, 1440px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+  align-items: center;
+  gap: clamp(2rem, 8vw, 6rem);
+}
+
+/* Coluna da Imagem */
+.gestao-ti__visual {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.gestao-ti__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gestao-ti__visual:hover .gestao-ti__image {
+  transform: scale(1.03);
+}
+
+/* Coluna de Conteúdo */
+.gestao-ti__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.gestao-ti__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.gestao-ti__titulo {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.gestao-ti__subtitulo {
+  color: #718096; /* Cinza suave */
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Lista de Benefícios */
+.gestao-ti__lista {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.gestao-ti__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.gestao-ti__icon-box {
+  flex-shrink: 0;
+  color: var(--secondary-color); /* Laranja conforme a imagem */
+  width: 24px;
+  height: 24px;
+  margin-top: 4px;
+}
+
+.gestao-ti__item-titulo {
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.gestao-ti__item-descricao {
+  color: #4A5568;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 45ch;
+}
+
+/* Botão Solicitar Orçamento */
+.gestao-ti__actions {
+  margin-top: 1rem;
+}
+
+.gestao-ti__btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.gestao-ti__btn:hover {
+  background-color: var(--secondary-color);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(232, 93, 68, 0.2);
+}
+
+/* ==========================================================================
+   BREAKPOINTS (1440, 1024, 768, 390)
+   ========================================================================== */
+
+/* Laptop (1024px) */
+@media (max-width: 1024px) {
+  .gestao-ti__container {
+    gap: 3rem;
+  }
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  .gestao-ti__container {
+    grid-template-columns: 1fr; /* Empilha as colunas */
+    text-align: center;
+    gap: 4rem;
+  }
+
+  .gestao-ti__item {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .gestao-ti__visual {
+    max-width: 500px;
+    margin-inline: auto;
+    order: -1; /* Garante que a imagem apareça antes do texto */
+  }
+
+  .gestao-ti__item-descricao {
+    margin-inline: auto;
+  }
+
+  .gestao-ti__content {
+    align-items: center;
+  }
+}
+
+/* Mobile (390px) */
+@media (max-width: 390px) {
+  .gestao-ti {
+    padding-block: 3rem;
+  }
+
+  .gestao-ti__titulo {
+    font-size: 1.6rem;
+  }
+
+  .gestao-ti__btn {
+    width: 100%; /* Botão ocupa a largura total no mobile */
+  }
+}

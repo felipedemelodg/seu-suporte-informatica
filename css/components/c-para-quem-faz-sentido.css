@@ -1,0 +1,183 @@
+/* ==========================================================================
+   SEÇÃO PERFIL DE CLIENTE
+   ========================================================================== */
+
+.perfil-cliente {
+  background-color: #F0F4F8; /* Tom de cinza azulado claro do fundo */
+  padding-block: clamp(4rem, 10vh, 6rem);
+  scroll-margin-top: 60px; /* Header fixo */
+  grid-area: para_quem_faz_sentido
+;
+}
+
+.perfil-cliente__container {
+  width: min(90%, 1440px);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* Header Superior Centralizado */
+.perfil-cliente__header {
+  text-align: center;
+}
+
+.perfil-cliente__secao-tag {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 900;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.perfil-cliente__secao-tag::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+/* Layout de Conteúdo (Duas Colunas) */
+.perfil-cliente__content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Coluna dos cards levemente maior */
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Coluna Esquerda: Texto Intro */
+.perfil-cliente__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.perfil-cliente__tagline {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.perfil-cliente__titulo-principal {
+  color: var(--primary-color);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.perfil-cliente__descricao {
+  color: #4A5568;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 40ch;
+}
+
+/* Coluna Direita: Lista de Cards */
+.perfil-cliente__lista-cards {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.perfil-cliente__card {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 4px; /* Raio leve conforme a imagem */
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perfil-cliente__card:hover {
+  transform: translateX(10px); /* Leve deslocamento para a direita */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Ícones dos Cards */
+.perfil-cliente__icon-wrapper {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfil-cliente__icon {
+  width: 100%;
+  height: auto;
+  /* Se for SVG inline ou fonte, use: color: var(--secondary-color); */
+}
+
+/* Texto dentro do Card */
+.perfil-cliente__card-titulo {
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.perfil-cliente__card-texto {
+  color: #718096;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   BREAKPOINTS (1440, 1024, 768, 390)
+   ========================================================================== */
+
+/* Laptop (1024px) */
+@media (max-width: 1024px) {
+  .perfil-cliente__content {
+    gap: 2rem;
+  }
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  .perfil-cliente__content {
+    grid-template-columns: 1fr; /* Empilha as colunas */
+    text-align: center;
+  }
+
+  .perfil-cliente__intro {
+    align-items: center;
+  }
+
+  .perfil-cliente__card {
+    flex-direction: column; /* Ícone em cima do texto no mobile */
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .perfil-cliente__card:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* Mobile (390px) */
+@media (max-width: 390px) {
+  .perfil-cliente {
+    padding-block: 3rem;
+  }
+
+  .perfil-cliente__titulo-principal {
+    font-size: 1.7rem;
+  }
+
+  .perfil-cliente__card-titulo {
+    font-size: 1.1rem;
+  }
+}

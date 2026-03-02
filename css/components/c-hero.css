@@ -1,0 +1,226 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100svh;
+  background-image: url("/assets/img/hero__background.png");
+  background-size: auto auto;
+  background-position: 38vw -7svh;
+  background-repeat: no-repeat;
+  min-width: 390px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* z-index: 1; */
+  background-image:
+    url("/assets/img/logo_isotipo_transparente.png"),
+    linear-gradient(to bottom, #ff6600, #cc0000);
+  background-size:
+    auto 70%,
+    100%;
+  background-repeat: no-repeat;
+  background-position:
+    28svh 42%,
+    0 0;
+  /* clip-path: polygon(0% 0%, 19% 0%, 48% 52%, 27% 101%, 0% 100%); */
+  clip-path: polygon(0px 0px, 24svh -22svh, 102svh 45svh, 53svh 100%, 0px 100%);
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: var(--max-width);
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.hero__infos {
+  grid-area: 1 / 1 / 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1;
+}
+.hero__logo{
+  display: none;
+}
+
+.hero__brands {
+  grid-template-columns: 1fr 1fr;
+  grid-area: 1 / 2 / 1/ 2;
+  display: flex;
+
+  bottom: 0px;
+
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.hero__brands-list {
+  border-top-left-radius: var(--radius-1);
+  border-top-right-radius: var(--radius-1);
+  width: 400px;
+  height: 48px;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-5);
+}
+
+.hero__brands-list > img {
+  width: auto;
+  height: 13px;
+}
+.hero__headline{
+   margin-bottom: var(--spacing-5)
+}
+
+/* table */
+@media (max-width: 1024px) {
+  .hero {
+    /* background-size: auto auto; */
+    background-position: 18svw -9svh;
+  }
+  .hero::before {
+    background-position:
+      4svh 42%,
+      0 0;
+    clip-path: polygon(0px 0px, 20svh -6svh, 78svh 45svh, 30svh 100%, 0px 100%);
+  }
+
+  .hero__container {
+    padding-inline: var(--spacing-4);
+    /* padding-right: 200px; */
+    width: 1024px;
+  }
+
+  .hero__headline {
+    width: 600px;
+   
+  }
+  .hero__logo{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__container {
+    /* padding-inline: var(--spancing-2); */
+    grid-template-columns: 1fr;
+    width: 768px;
+  }
+
+  .hero {
+    background-position: -19vw -9svh;
+    width: 768px;
+  }
+
+  .hero::before {
+    clip-path: polygon(0px 0px, 8svh 8svh, 51svh 45svh, 3svh 100%, 0px 100%);
+    background-size:
+      42svh auto,
+      100%;
+    /* background-repeat: no-repeat; */
+    background-position:
+      11% 43%,
+      0 0;
+  }
+
+  .hero__infos {
+    grid-area: 1 / 1 / 1 / 1;
+  }
+
+  .hero__logo {
+    width: 270px;
+    margin-bottom: var(--spacing-12);
+    display: block;
+    align-self: center;
+  }
+  .hero__cta{
+    margin-bottom: 300px;
+  }
+
+  .hero__headline {
+    font-size: var(--text-3xl);
+    max-width: 400px;
+  }
+
+  .hero__subheadline {
+    max-width: 400px;
+  }
+
+  .hero__brands {
+    grid-area: 1 / 1 / 1 / 1;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero {
+    max-width: 390px;
+    background-position: -50svh -10svh;
+  }
+
+  .hero__container {
+    max-width: 390px;
+    padding-inline: var(--spacing-1);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    background-position: -70vw 0svh;
+  }
+
+  .hero::before {
+    clip-path: polygon(
+      0px 0px,
+      -22svh 11svh,
+      48svh 70svh,
+      20svh 100%,
+      0px 100%
+    );
+    background-size:
+      auto 44%,
+      100%;
+    background-position:
+      11% 88%,
+      0 0;
+  }
+
+  .hero__logo {
+    width: 270px;
+    margin-bottom: 220px;
+    align-self: center;
+  }
+
+  .hero__headline {
+    font-size: var(--text-2xl);
+    width: 200px;
+  }
+
+  .hero__subheadline {
+    width: 300px;
+    font-size: var(--text-sm);
+  }
+  .hero__cta {
+    margin-bottom: -20px;
+    padding-inline: var(--spacing-2);
+  }
+  .hero__infos {
+    grid-area: 1/ 1/ 2/ 1;
+  }
+  .hero__brands {
+    grid-area: 2/ 1/ 3/ 1;
+    z-index: 1;
+
+    justify-content: center;
+  }
+  .hero__brands-list {
+    width: 280px;
+    gap: var(--spacing-2);
+  }
+}

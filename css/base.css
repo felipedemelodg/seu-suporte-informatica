@@ -1,0 +1,58 @@
+/* No teu base.css */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat/Montserrat-Black.ttf') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap; 
+}
+
+/* Fonte Secundária */
+@font-face {
+  font-family: 'font-secondary';
+  src: url('../assets/fonts/Roboto/Roboto-Bold.ttf') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* 1. Aplicar um line-height base no body para consistência */
+body {
+  line-height: var(--lh-base);
+  display: flex;
+  flex-direction: column;
+}
+
+/* 2. Definir o ritmo vertical para headings e parágrafos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: var(--spacing-1);
+  /* A tua variável de ritmo */
+}
+h2{
+  font-family: var(--font-primary)
+}
+
+/* 3. Ajustes específicos para manter a hierarquia */
+h1 {
+  font-size: var(--text-5xl);
+  margin-bottom: var(--spacing-2);
+  font-weight: 900;
+  max-width: 500px;
+  line-height: var(--lh-tight);
+  text-wrap: balance;
+}
+
+p {
+  /* max-width: 500px; */
+  font-size: var(--text-md);
+  margin-bottom: var(--spacing-3);
+}
+
+/* Tags inline como 'a' e 'strong' não levam margens verticais 
+   pois seguem o fluxo do bloco onde estão inseridas. */

@@ -1,0 +1,44 @@
+.c-btn {
+    /* Estilo base do componente (Pele) */
+    font-family: var(--font-secondary), sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    /* border-radius: 4px; */
+    border-width: 1px;
+}
+
+.c-btn--primary {
+    background-color: var(--gray-0-opacity-02);
+    /* border-color: #0069d9; */
+    color:var(--gray-0);
+    height: 48px;
+    border-radius: var(--radius-1)
+}
+.c-btn--primary:hover {
+    background-color: var(--primary-color);
+    /* border-color: #0056b3; */
+}
+
+.c-btn--primary:active {
+    background-color: var(--primary-color);
+    
+    border-color: var(--gray-0)
+}
+.c-btn--primary-auto-active {
+    background-color: var(--primary-color);
+    border-color: var(--gray-0)
+}
+
+.c-btn--primary:focus {
+    background-color: var(--primary-color);
+    
+}
+.c-btn--primary--link{
+    text-decoration: none;
+    color: white;
+}
+
+.c-btn--cta {
+    background-color: var(--primary-color);
+    border-radius: var(--radius-1)
+}

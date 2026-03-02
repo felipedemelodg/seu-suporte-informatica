@@ -1,3 +1,32 @@
 @import url(reset.css);
 @import url(variables.css);
-@import url(../assets/fonts/fonts.css);
+@import url(base.css);
+@import url(/css/layout/l-container.css);
+@import url(/css/layout/l-wrapper.css);
+@import url(/css/layout/l-main.css);
+@import url(/css/layout/l-hero.css);
+@import url(/css/objects/o-buttons.css);
+@import url(/css/components/c-header.css);
+@import url(/css/components/c-hero.css);
+@import url(/css/components/c-btn.css);
+@import url(/css/components/c-quem-somos.css);
+@import url(/css/components/c-problemas-que-resolvemos.css);
+@import url(/css/components/c-como-ajudar.css);
+@import url(/css/components/c-como-pensamos.css);
+
+@import url(/css/components/c-histora-valores.css);
+@import url(/css/components/c-essencia.css);
+@import url(/css/components/c-para-quem-faz-sentido.css);
+@import url(/css/components/c-impacto-que-geramos.css);
+
+@import url(/css/components/c-hero-servicos.css);
+@import url(/css/components/c-manutencao.css);
+@import url(/css/components/c-seguranca.css);
+@import url(/css/components/c-gestao.css);
+@import url(/css/components/c-infra.css);
+@import url(/css/components/c-servidores.css);
+
+@import url(/css/components/c-contatos-hero-card.css);
+
+
+@import url(/css/components/c-footer.css);

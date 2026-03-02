@@ -1,0 +1,84 @@
+/* ==========================================================================
+   SEÇÃO: SOLUÇÕES E BLINDAGEM
+   ========================================================================== */
+
+.solucoes-blindagem {
+  /* 1. Fundo sólido usando sua variável */
+  background-color: var(--primary-color);
+  
+  /* 2. Configuração do Background centralizado com 70% de largura */
+  background-image: url('../../assets/img/circuito.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 70% auto; /* Define os 70% de largura solicitados */
+  
+  /* Ajustes de altura e centralização de conteúdo */
+  min-height: clamp(400px, 60vh, 600px);
+  display: grid;
+  place-items: center;
+  padding-block: 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.solucoes-blindagem__container {
+  width: min(90%, 1440px);
+  margin-inline: auto;
+  z-index: 2; /* Garante que o texto fique acima do desenho de fundo */
+}
+
+.solucoes-blindagem__content {
+  max-width: 850px; /* Limita a largura para bater com o design da imagem */
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.solucoes-blindagem__tagline {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  letter-spacing: 2px;
+}
+
+.solucoes-blindagem__titulo {
+  color: #FFFFFF;
+  /* Fonte responsiva baseada na viewport */
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+  line-height: 1.2;
+  font-weight: 800;
+  text-wrap: balance; /* Evita que uma palavra fique sozinha na linha */
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (BREAKPOINTS)
+   ========================================================================== */
+
+/* Laptop (1024px) */
+@media (max-width: 1024px) {
+  .solucoes-blindagem {
+    background-size: 85% auto; /* Aumenta um pouco o desenho em telas menores */
+  }
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  .solucoes-blindagem {
+    background-size: 100% auto; /* Preenche a largura no tablet */
+  }
+}
+
+/* Mobile (390px) */
+@media (max-width: 390px) {
+  .solucoes-blindagem {
+    padding-block: 3rem;
+    min-height: 350px;
+  }
+
+  .solucoes-blindagem__titulo {
+    font-size: 1.6rem;
+  }
+}

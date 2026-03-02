@@ -1,0 +1,63 @@
+/* 1. Camada de Reset (Garante que os teus estilos futuros ganhem sempre) */
+@layer reset {
+
+  /* Remove margens e define o box-sizing global */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  /* Previne que o scroll salte ao mudar de página */
+  html {
+    color-scheme: light dark; /* Suporte nativo a Dark Mode */
+    scroll-behavior: smooth;
+  }
+
+  /* Configurações básicas do Body */
+  body {
+    min-height: 100svh; /* Altura total dinâmica para mobile */
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased; /* Texto mais nítido no Mac */
+    font-family: system-ui, sans-serif;
+  }
+
+  /* Imagens e Media mais resilientes */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto; /* Mantém a proporção */
+  }
+
+  /* Força formulários a herdarem a fonte do site */
+  input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+  }
+
+  /* Melhora a legibilidade de textos */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word; /* Evita que palavras longas quebrem o layout */
+    text-wrap: pretty; /* Evita palavras sozinhas na última linha */
+  }
+
+  /* Remove o estilo de lista apenas se não houver classe (preserva semântica) */
+  ul[class], ol[class] {
+    list-style: none;
+    padding: 0;
+  }
+
+  /* Respeita quem prefere menos animações (Acessibilidade) */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Permite animar de height 0 para auto (Nativo 2026) */
+  :root {
+    interpolate-size: allow-keywords;
+  }
+}

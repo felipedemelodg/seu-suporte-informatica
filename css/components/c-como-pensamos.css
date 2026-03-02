@@ -1,0 +1,164 @@
+.como-pensamos {
+  background-color: var(--gray-100);
+  /* 1. Resolve o problema do clique no menu (âncora) */
+  scroll-margin-top: 80px;
+
+  /* 2. Ajusta a altura mínima descontando o header */
+  min-height: calc(100svh - 80px);
+
+  display: grid;
+  place-items: center;
+  padding-block: clamp(3rem, 10vh, 6rem);
+  font-family: sans-serif;
+  grid-area: como_pensamos;
+}
+
+.como-pensamos__container {
+  width: min(90%, var(--max-width));
+  margin-inline: auto;
+}
+
+/* Header da Seção (Título "Como Pensamos") */
+.como-pensamos__header {
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vh, 4rem);
+}
+
+.como-pensamos__secao-titulo {
+  display: inline-flex;
+  /* display: inline-block; */
+  font-size: 1.5rem;
+  font-weight: 800;
+  position: relative;
+  padding-bottom: 8px;
+  color: var(--primary-color);
+  font-family: var(--font-primary);
+  font-weight: 900;
+  gap: 10px;
+}
+.como-pensamos__titulo-icon {
+  align-self: self-start;
+  margin-top: -20px;
+}
+
+/* A linha azul abaixo do título principal */
+.como-pensamos__secao-titulo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+/* Estrutura de Conteúdo */
+.como-pensamos__content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Coluna do texto levemente maior */
+  align-items: center;
+  gap: 4rem;
+  font-family: var(--font-secondary)
+}
+
+.como-pensamos__visual {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.como-pensamos__icon {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.como-pensamos__texto-bloco {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.como-pensamos__tagline {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.como-pensamos__principal-titulo {
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--primary-color);
+  max-width: 20ch; /* Limita largura para melhor leitura */
+}
+
+.como-pensamos__descricao {
+  line-height: 1.6;
+  color: var(--gray-800);
+  font-size: 1.1rem;
+  max-width: 50ch;
+}
+
+.como-pensamos__citacao {
+  border-left: 3px solid var(--secondary-color);
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  font-style: italic;
+  font-weight: 600;
+  margin: 0;
+  color: var(--gray-800);
+}
+
+/* ==========================================================================
+   BREAKPOINTS ADAPTADOS
+   ========================================================================== */
+
+/* 1024px - Laptops */
+@media (max-width: 1024px) {
+  .como-pensamos__content {
+    gap: 2rem;
+  }
+}
+
+/* 768px - Tablets */
+@media (max-width: 768px) {
+  .como-pensamos__content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .como-pensamos__visual {
+    justify-content: center;
+    order: -1; /* Mantém o ícone acima do texto no mobile */
+  }
+
+  .como-pensamos__texto-bloco {
+    align-items: center;
+  }
+
+  .como-pensamos__citacao {
+    border-left: none;
+    border-top: 2px solid var(--secondary-color);
+    padding: 1.5rem 0 0;
+    width: 80%;
+  }
+}
+
+/* 390px - Mobile */
+@media (max-width: 390px) {
+  .como-pensamos {
+    padding-block: 4rem; /* Garante distância do header fixo */
+  }
+  .como-pensamos__container {
+    margin-top: 80px;
+  }
+  .como-pensamos__icon {
+    max-width: 140px;
+  }
+
+  .como-pensamos__principal-titulo {
+    font-size: 1.5rem;
+  }
+}

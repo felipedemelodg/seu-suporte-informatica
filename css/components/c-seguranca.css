@@ -1,0 +1,174 @@
+/* ==========================================================================
+   SEÇÃO: SEGURANÇA ELETRÔNICA
+   ========================================================================== */
+
+.seguranca {
+  background-color: #F8FAFC; /* Um tom levemente diferente para separar as seções */
+  padding-block: clamp(4rem, 10vh, 8rem);
+  scroll-margin-top: 60px; /* Header fixo */
+  grid-area: segurança_eletronica;
+}
+
+.seguranca__container {
+  width: min(90%, 1440px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* Texto levemente maior que a imagem */
+  align-items: center;
+  gap: clamp(2rem, 8vw, 6rem);
+}
+
+/* Coluna de Conteúdo (Esquerda) */
+.seguranca__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.seguranca__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.seguranca__titulo {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.seguranca__subtitulo {
+  color: #718096;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Lista de Funcionalidades */
+.seguranca__lista {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.seguranca__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.seguranca__icon-box {
+  flex-shrink: 0;
+  color: var(--secondary-color);
+  width: 24px;
+  height: 24px;
+  margin-top: 4px;
+}
+
+.seguranca__item-titulo {
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.seguranca__item-descricao {
+  color: #4A5568;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 45ch;
+}
+
+/* Botão Solicitar Orçamento */
+.seguranca__btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.seguranca__btn:hover {
+  background-color: var(--secondary-color);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(232, 93, 68, 0.15);
+}
+
+/* Coluna da Imagem (Direita) */
+.seguranca__visual {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.seguranca__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   BREAKPOINTS (1440, 1024, 768, 390)
+   ========================================================================== */
+
+/* Laptop (1024px) */
+@media (max-width: 1024px) {
+  .seguranca__container {
+    gap: 3rem;
+  }
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  .seguranca__container {
+    grid-template-columns: 1fr; /* Empilha colunas */
+    text-align: center;
+    gap: 3rem;
+  }
+
+  /* Faz a imagem aparecer PRIMEIRO no mobile/tablet */
+  .seguranca__visual {
+    order: -1; 
+    max-width: 500px;
+    margin-inline: auto;
+  }
+
+  .seguranca__item {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .seguranca__item-descricao {
+    margin-inline: auto;
+  }
+
+  .seguranca__content {
+    align-items: center;
+  }
+}
+
+/* Mobile (390px) */
+@media (max-width: 390px) {
+  .seguranca {
+    padding-block: 3rem;
+  }
+
+  .seguranca__titulo {
+    font-size: 1.6rem;
+  }
+
+  .seguranca__btn {
+    width: 100%;
+  }
+}
